@@ -19,6 +19,12 @@
     "android": {
       "package": "com.tuttucodes.estateledger"
     },
+    "web": {
+      "name": "Estate Ledger",
+      "shortName": "EstateLedger",
+      "themeColor": "#24389c",
+      "backgroundColor": "#f7f9fb"
+    },
     "plugins": [
       "expo-notifications"
     ],

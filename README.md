@@ -150,6 +150,7 @@ npm run build:ios:preview
 ```
 
 Notes:
+
 - Android preview profile generates installable APK.
 - iOS preview profile generates an internal test build (requires Apple account setup in EAS).
 - After build completes, EAS provides install links/QR for physical device testing.
@@ -160,3 +161,4 @@ Notes:
 - OCR is a placeholder (`documents.extracted_data`) and is structured for future OCR API integration.
 - Prevents duplicate pending payment submissions per tenant.
 - Requires UTR for UPI/bank methods.
+
