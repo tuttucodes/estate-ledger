@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pay Rent - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#002113",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "primary-fixed": "#dee0ff",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eceef0",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-tint": "#4355b9",
+                        "secondary-container": "#d5e3fc",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "secondary-fixed": "#d5e3fc",
+                        "background": "#f7f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "tertiary-container": "#006846",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary": "#24389c",
+                        "surface-dim": "#d8dadc",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c5c5d4",
+                        "surface-container-low": "#f2f4f6",
+                        "surface": "#f7f9fb",
+                        "on-primary-fixed": "#00105c",
+                        "on-surface": "#191c1e",
+                        "secondary": "#515f74",
+                        "on-surface-variant": "#454652",
+                        "on-tertiary-container": "#5debaf",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#cacfff",
+                        "on-secondary-container": "#57657a",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#bac3ff",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "outline": "#757684",
+                        "primary-container": "#3f51b5",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary": "#004e33"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional man in a light blue shirt smiling warmly against a soft studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ0C2ICEsxI2nRFiftxhQxPiJtAK1dgFuWkxmOaRPzg8505yZGvRpGEqgFe39vMX2ZNiFcvB2e4scp9aPdnwKwo_Q3Pu8tV4ND5BqFC70MwilMkja7_nsOy4E0dV_D6eAZF-7uNwHT4NcNp9jDGs6NE5N4A_w6b6BkLmQLXhhgmuuY-FbFWkNBzzCd27xG035C2vAmyV8PYp02rf4WTtzs0lRJykzGMfINkqhV0QWL3s7V9ra9vSbY0TZwA_iiJMKlYdM7LMaq1-sd"/>
+</div>
+<span class="font-manrope font-extrabold text-indigo-700 text-lg">Portfolio</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100/50 transition-all duration-300">
+<span class="material-symbols-outlined text-indigo-900" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Editorial Header -->
+<section class="mb-10">
+<span class="text-on-surface-variant font-label text-sm font-medium tracking-wider uppercase">Current Statement</span>
+<h1 class="text-4xl font-headline font-extrabold text-primary mt-2 leading-tight">August Rent</h1>
+<div class="mt-6 flex items-baseline gap-2">
+<span class="text-5xl font-headline font-black tracking-tighter text-on-surface">$2,450.00</span>
+<span class="text-on-surface-variant font-body font-medium">due in 3 days</span>
+</div>
+</section>
+<!-- Payment Method Stepper -->
+<div class="flex items-center justify-between mb-8 px-2">
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary text-xs font-bold">1</div>
+<span class="text-[10px] font-semibold text-primary uppercase tracking-widest">Method</span>
+</div>
+<div class="flex-1 h-[2px] bg-primary/20 mx-4 mb-6"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant text-xs font-bold">2</div>
+<span class="text-[10px] font-semibold text-on-surface-variant uppercase tracking-widest">Details</span>
+</div>
+<div class="flex-1 h-[2px] bg-surface-container-highest mx-4 mb-6"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant text-xs font-bold">3</div>
+<span class="text-[10px] font-semibold text-on-surface-variant uppercase tracking-widest">Confirm</span>
+</div>
+</div>
+<!-- Payment Options: Bento Style -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Primary Option: UPI -->
+<div class="relative group cursor-pointer bg-surface-container-lowest p-6 rounded-3xl border-2 border-primary shadow-[0px_12px_32px_rgba(25,28,30,0.06)] transition-all duration-300">
+<div class="absolute top-4 right-6 bg-tertiary-container px-3 py-1 rounded-full">
+<span class="text-[10px] font-bold text-on-tertiary-container tracking-wider uppercase">Recommended</span>
+</div>
+<div class="flex items-start gap-5">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-headline font-bold text-on-surface">Instant UPI Pay</h3>
+<p class="text-on-surface-variant text-sm mt-1 font-body leading-relaxed">Pay instantly via any UPI app. Zero convenience fees and immediate confirmation.</p>
+<div class="mt-6 bg-surface-container-low p-4 rounded-2xl">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[11px] font-bold text-on-surface-variant uppercase">Your VPA</span>
+<span class="text-xs font-mono text-primary font-bold">tenant.rent@okaxis</span>
+</div>
+<button class="w-full py-3 mt-2 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold rounded-xl shadow-lg active:scale-[0.98] transition-transform">
+                                Pay via UPI App
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Option: Bank Transfer -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl group hover:bg-surface-container-low transition-colors duration-300">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="account_balance">account_balance</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface">Bank Transfer</h3>
+<p class="text-on-surface-variant text-xs mt-2 font-body leading-relaxed">NEFT/RTGS/IMPS. Takes 2-24 hours to reflect in your ledger.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 text-primary font-semibold text-sm">
+<span>View Bank Details</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Option: Cash/Check -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl group hover:bg-surface-container-low transition-colors duration-300">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="payments">payments</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface">Cash / Check</h3>
+<p class="text-on-surface-variant text-xs mt-2 font-body leading-relaxed">Deposit at the property office. Please collect a physical receipt.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 text-on-surface-variant font-semibold text-sm">
+<span>Office Hours: 9AM - 6PM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Security Badge -->
+<div class="mt-12 flex flex-col items-center justify-center gap-3">
+<div class="flex items-center gap-2 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em]">Secure 256-bit Encrypted Payment</span>
+</div>
+<div class="flex gap-4 grayscale opacity-40">
+<div class="h-6 w-10 bg-on-surface-variant/20 rounded"></div>
+<div class="h-6 w-10 bg-on-surface-variant/20 rounded"></div>
+<div class="h-6 w-10 bg-on-surface-variant/20 rounded"></div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-3xl z-50 shadow-[0px_-12px_32px_rgba(25,28,30,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1.5 hover:bg-white/50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-inter text-[10px] font-medium tracking-tight">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1.5 hover:bg-white/50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="domain">domain</span>
+<span class="font-inter text-[10px] font-medium tracking-tight">Properties</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-200 rounded-2xl px-3 py-1.5 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="payments" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-inter text-[10px] font-medium tracking-tight">Payments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1.5 hover:bg-white/50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="receipt_long">receipt_long</span>
+<span class="font-inter text-[10px] font-medium tracking-tight">Expenses</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1.5 hover:bg-white/50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="description">description</span>
+<span class="font-inter text-[10px] font-medium tracking-tight">Docs</span>
+</a>
+</nav>
+</body></html>

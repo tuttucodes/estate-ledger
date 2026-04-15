@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Estate Ledger",
+    "slug": "estate-ledger",
+    "owner": "itsrahulbk",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tuttucodes.estateledger",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.tuttucodes.estateledger"
+    },
+    "plugins": [
+      "expo-notifications"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c20a399b-d8a5-4a79-bf10-d4b92771d312"
+      }
+    }
+  }
+}

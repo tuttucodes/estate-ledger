@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expense Verification - Estate Ledger</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c5c5d4",
+                    "surface-bright": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "primary-fixed": "#dee0ff",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#004e33",
+                    "background": "#f7f9fb",
+                    "on-background": "#191c1e",
+                    "on-error": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-fixed": "#00105c",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "on-surface-variant": "#454652",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-fixed-variant": "#293ca0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "on-tertiary-fixed": "#002113",
+                    "tertiary-fixed": "#6ffbbe",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#006846",
+                    "secondary-fixed": "#d5e3fc",
+                    "secondary-container": "#d5e3fc",
+                    "error-container": "#ffdad6",
+                    "secondary": "#515f74",
+                    "on-tertiary-container": "#5debaf",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary-container": "#cacfff",
+                    "inverse-primary": "#bac3ff",
+                    "surface": "#f7f9fb",
+                    "surface-tint": "#4355b9",
+                    "primary": "#24389c",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-fixed-dim": "#bac3ff",
+                    "outline": "#757684",
+                    "on-secondary-fixed": "#0d1c2e",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e6e8ea",
+                    "on-secondary-container": "#57657a",
+                    "inverse-on-surface": "#eff1f3",
+                    "primary-container": "#3f51b5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-low { background-color: rgba(242, 244, 246, 0.8); }
+        .tonal-shift-high { background-color: rgba(236, 238, 240, 0.95); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased mb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 text-indigo-900">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold text-lg tracking-tight text-indigo-900">Add Expense</h1>
+</div>
+<button class="active:scale-95 duration-200 text-indigo-900">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="pt-20 px-6 max-w-2xl mx-auto">
+<!-- Receipt Preview Section -->
+<section class="mb-8 mt-4">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-1 aspect-[4/3] group">
+<img alt="Scanned Receipt" class="w-full h-full object-cover rounded-lg shadow-sm" data-alt="Close up of a printed paper receipt with financial text and numbers on a neutral gray office desk surface in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJIYcUnN04ahRD1jiJvWlVFhkkLgHHW8yC7cOjzTj89PO_NKHpGadnp0xkyQFyB918K82BGN8Jo4oigcL4398G_8KBkKQc9P1_0ItRYTtRGlAXtUpTzqxefgRBF7j1rQ-x1VEsSB2pXQ6JZDWEnkbC6ZXYyB_5vyKiD1BAVSYICDyXrDlPoHgtGTvSTT6QuFaDjs88q2TZCH0rEHlzk8Cl0h_HcbyoQIkFuIPLBPZZqj2KckBMiMCPNNhTtGnkeEfYeluGSqueRgry"/>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+<span class="bg-tertiary-container/90 backdrop-blur-md text-on-tertiary-container px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-tertiary-container/20">
+<span class="material-symbols-outlined text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        AI Confidence: 98%
+                    </span>
+<button class="bg-white/90 backdrop-blur-md text-primary p-2 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="zoom_in">zoom_in</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Editable Form Section -->
+<section class="space-y-6">
+<!-- Amount Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">
+<label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Total Amount</label>
+<div class="flex items-baseline gap-2">
+<span class="font-headline text-3xl font-bold text-primary">$</span>
+<input class="w-full font-headline text-4xl font-extrabold text-on-surface bg-transparent border-none focus:ring-0 p-0" step="0.01" type="number" value="1248.50"/>
+</div>
+</div>
+<!-- Detail Fields -->
+<div class="bg-surface-container-low rounded-xl p-6 space-y-6">
+<!-- Property Dropdown -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Property</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-highest border-none rounded-lg py-3 px-4 text-on-surface font-semibold focus:bg-surface-container-lowest focus:ring-2 focus:ring-surface-tint/20 transition-all">
+<option>The Heights - Unit 402</option>
+<option>Skyline Lofts - Penthouse</option>
+<option>Oak Ridge Estates - Main Office</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+<!-- Category Dropdown -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Expense Category</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-highest border-none rounded-lg py-3 px-4 text-on-surface font-semibold focus:bg-surface-container-lowest focus:ring-2 focus:ring-surface-tint/20 transition-all">
+<option>Maintenance &amp; Repairs</option>
+<option>Utilities</option>
+<option>Insurance</option>
+<option>Marketing</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline" data-icon="construction">construction</span>
+</div>
+</div>
+<!-- Date Picker -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Transaction Date</label>
+<div class="relative">
+<input class="w-full appearance-none bg-surface-container-highest border-none rounded-lg py-3 px-4 text-on-surface font-semibold focus:bg-surface-container-lowest focus:ring-2 focus:ring-surface-tint/20 transition-all" type="date" value="2023-10-24"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline" data-icon="calendar_today">calendar_today</span>
+</div>
+</div>
+<!-- Notes Textarea -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Notes (Optional)</label>
+<textarea class="w-full appearance-none bg-surface-container-highest border-none rounded-lg py-3 px-4 text-on-surface font-medium focus:bg-surface-container-lowest focus:ring-2 focus:ring-surface-tint/20 transition-all resize-none" placeholder="Add specific details about this repair..." rows="3">HVAC maintenance for North wing apartments. Includes filter replacement and thermostat recalibration.</textarea>
+</div>
+</div>
+</section>
+<!-- Confirm Action -->
+<div class="mt-8 mb-12">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-5 rounded-xl font-headline font-bold text-lg shadow-lg active:scale-95 transition-all flex justify-center items-center gap-2">
+<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Confirm &amp; Save Expense
+            </button>
+<button class="w-full mt-4 text-primary font-bold py-2 active:scale-95 transition-transform">
+                Recapture Receipt
+            </button>
+</div>
+</main>
+<!-- BottomNavBar (Filtered for visibility context) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-8 px-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 rounded-t-3xl shadow-[0px_-12px_32px_rgba(25,28,30,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-inter text-xs font-semibold">Portfolio</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-100 dark:bg-indigo-900/40 text-indigo-900 dark:text-indigo-200 rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="font-inter text-xs font-semibold">Expenses</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-inter text-xs font-semibold">Receipts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-inter text-xs font-semibold">Settings</span>
+</a>
+</nav>
+</body></html>

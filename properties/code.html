@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#002113",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "primary-fixed": "#dee0ff",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eceef0",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-tint": "#4355b9",
+                        "secondary-container": "#d5e3fc",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "secondary-fixed": "#d5e3fc",
+                        "background": "#f7f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "tertiary-container": "#006846",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary": "#24389c",
+                        "surface-dim": "#d8dadc",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c5c5d4",
+                        "surface-container-low": "#f2f4f6",
+                        "surface": "#f7f9fb",
+                        "on-primary-fixed": "#00105c",
+                        "on-surface": "#191c1e",
+                        "secondary": "#515f74",
+                        "on-surface-variant": "#454652",
+                        "on-tertiary-container": "#5debaf",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#cacfff",
+                        "on-secondary-container": "#57657a",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#bac3ff",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "outline": "#757684",
+                        "primary-container": "#3f51b5",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary": "#004e33"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Manrope', sans-serif; }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="User profile photo" data-alt="professional headshot of a mature male property manager with a friendly expression in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc3H-GCRmtr0obKCG7ES2cy5IL6U7kXQGem3Jgw8rtQq1k7aD8tcz8ieyhvODlGKuvCR6SbpC1mIVF2DBXvILiihJujR6pjwxkTo6eQDr5PTrix-_YcgRqziM7ErTRsTnm6BjRhS5_3KILmBjAdKyMs8BlBuPxKd2Sp4iD_tMGpJrlxnz9SIx83S57WH4RltknuspwLUmYTLhU8oqY3MpHz2L_rG_ZfPtO8nI8eYmtsH1Z5n0vMlL-GxYEhJMfle-_v_wkWov4AKoQ"/>
+</div>
+<h1 class="font-manrope font-extrabold text-indigo-700 dark:text-indigo-400 text-lg">Portfolio</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined text-indigo-900 dark:text-indigo-300">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-10">
+<div class="flex justify-between items-end mb-2">
+<h2 class="text-display-md font-headline font-extrabold text-on-surface tracking-tight leading-tight">Your Properties</h2>
+<span class="text-label-sm font-medium text-on-surface-variant mb-1">12 Total Assets</span>
+</div>
+<p class="text-body-md text-on-surface-variant max-w-md">Manage your real estate portfolio, track occupancy rates, and monitor monthly yields across all locations.</p>
+</section>
+<!-- Search & Filter (Asymmetric Layout) -->
+<div class="flex flex-col md:flex-row gap-4 mb-10">
+<div class="flex-grow relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl text-body-md focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Search address or name..." type="text"/>
+</div>
+<button class="flex items-center justify-center gap-2 px-6 py-4 bg-surface-container-high text-on-primary-fixed-variant rounded-xl font-semibold">
+<span class="material-symbols-outlined">filter_list</span>
+                Filters
+            </button>
+</div>
+<!-- Property Grid (Asymmetric & Mixed Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Featured Property Card (Large) -->
+<div class="md:col-span-2 group">
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0px_12px_32px_rgba(25,28,30,0.06)] transition-all duration-300 hover:translate-y-[-4px]">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern minimalist luxury villa with large glass windows and a swimming pool at twilight with warm interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfgNhN-TIo0OzW-mRuuL_61tt7Zshl8pt4vNqIbV1U7XYYSHcg7Rq8V6ASIhT2UHfi0ZbCM7Joo19tm5BoakNuK4JyoimX7JeItvzNLEQ4ciKtVQA-47GQ2xyu1E3e9budT-1yWyRCqORct2r5ZHgtRa_xM-_WWJ_I3nMEuMyjU0yWnI5CH1N97DSMry7HLl8tqvEUWZj5W-QCbeeX4054cLHZCehCJmP4D2YDBTYmV3Sqrj2VZFOsN6G2YJ_s5XmwmTl9JI-LpuSi"/>
+<div class="absolute top-4 left-4">
+<span class="px-4 py-1.5 bg-tertiary-container text-on-tertiary-container text-label-md font-semibold rounded-full glass-nav backdrop-blur-md">
+                                Full Occupancy
+                            </span>
+</div>
+<div class="absolute bottom-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md px-4 py-2 rounded-2xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary font-bold">trending_up</span>
+<span class="text-headline-sm font-bold text-on-surface">+$14,200 <span class="text-body-sm font-normal text-on-surface-variant">/mo</span></span>
+</div>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-headline-sm font-headline font-bold text-on-surface mb-1">Oak Ridge Residences</h3>
+<div class="flex items-center text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-body-md">2482 Westview Cir, Palo Alto, CA</span>
+</div>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-2xl bg-surface-container-low text-primary hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-8 border-t border-outline-variant/15 pt-6">
+<div>
+<p class="text-label-sm text-on-surface-variant mb-1 uppercase tracking-widest">Yield</p>
+<p class="text-headline-sm font-bold text-on-surface">5.8%</p>
+</div>
+<div>
+<p class="text-label-sm text-on-surface-variant mb-1 uppercase tracking-widest">Units</p>
+<p class="text-headline-sm font-bold text-on-surface">8 / 8</p>
+</div>
+<div>
+<p class="text-label-sm text-on-surface-variant mb-1 uppercase tracking-widest">Status</p>
+<div class="flex items-center gap-1.5 text-tertiary font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Stable</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Smaller Card 1 -->
+<div class="group">
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0px_12px_32px_rgba(25,28,30,0.06)] transition-all duration-300 hover:translate-y-[-4px]">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Elegant brownstone apartment building facade with classic architectural details and greenery in a historic urban neighborhood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKStrZHffGNIM1Bc-Qh-g0yzKU9AmGwHEMoUeZEfVOxQIJXPNabn1WLmvENVvGxbbxadIxttwxthyQ5YCYwop61QCKoA-bEwF9YN599yxdVu8v4X1sOaR-tkKQ5sqN6syxziGJCYBENkracxXJGzW96eGyKudr62oT3rpTvhCoA097-U-s69QNEy-rVQyYQWSmTz5dlLgWSiRtqViTg4m4oU0iQXfQ3hwVf2DBgzzCRJiB8Ud9p_REuuyENDZFBgZ8kE3JuDcPo6YG"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-surface-container-highest/90 text-on-surface-variant text-label-sm font-semibold rounded-full backdrop-blur-md">
+                                75% Occupied
+                            </span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-title-md font-headline font-bold text-on-surface mb-1">The Heights Lofts</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">452 Broadway Ave, Seattle, WA</p>
+<div class="bg-surface-container-low rounded-2xl p-4 flex justify-between items-center">
+<div>
+<p class="text-label-sm text-on-surface-variant">Monthly Income</p>
+<p class="text-title-lg font-bold text-on-surface">$8,450</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">error</span>
+<p class="text-[10px] text-error font-medium">1 Payment Overdue</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Smaller Card 2 -->
+<div class="group">
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0px_12px_32px_rgba(25,28,30,0.06)] transition-all duration-300 hover:translate-y-[-4px]">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Minimalist modern apartment interior with neutral tones and Scandinavian furniture, bright natural light coming from large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcZ6P_TPBGd5CIvWTILD2xjTYDitXIniaoMg-xij2KnhVMKnQEilfNZr6lZLHm6qesiXa5bhu7SyTAaVXBfzVV4PYMY0Ap_FpbZ57dlm5066dBndRDa54hxM6kzjdNW9qk7mP3meeLNfOF_vWCcPntoBkndXjf0MTsLboDmw_-xirTw5FRtFdMCn9Q_r0zJTnLe7QxQUH9TClJVuDvOQsRKgXLws2O0nkvf8N_LIqEwxP4FbmHMvETkLIsxNV8gcIUW9VcRQwXicYh"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-label-sm font-semibold rounded-full backdrop-blur-md">
+                                Full Occupancy
+                            </span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-title-md font-headline font-bold text-on-surface mb-1">Emerald Studios</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">1902 Pearl St, Austin, TX</p>
+<div class="bg-surface-container-low rounded-2xl p-4 flex justify-between items-center">
+<div>
+<p class="text-label-sm text-on-surface-variant">Monthly Income</p>
+<p class="text-title-lg font-bold text-on-surface">$5,100</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-[10px] text-tertiary font-medium">All Paid</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-2xl shadow-[0px_12px_32px_rgba(25,28,30,0.2)] flex items-center justify-center z-50 transition-transform active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600;">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-3xl z-50 shadow-[0px_-12px_32px_rgba(25,28,30,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1.5 hover:bg-white/50 dark:hover:bg-slate-800/50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-inter text-[10px] font-medium tracking-tight mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-200 rounded-2xl px-3 py-1.5 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="domain" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="font-inter text-[10px] font-medium tracking-tight mt-1">Properties</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1.5 hover:bg-white/50 dark:hover:bg-slate-800/50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-inter text-[10px] font-medium tracking-tight mt-1">Payments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1.5 hover:bg-white/50 dark:hover:bg-slate-800/50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-inter text-[10px] font-medium tracking-tight mt-1">Expenses</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1.5 hover:bg-white/50 dark:hover:bg-slate-800/50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-inter text-[10px] font-medium tracking-tight mt-1">Docs</span>
+</a>
+</nav>
+</body></html>

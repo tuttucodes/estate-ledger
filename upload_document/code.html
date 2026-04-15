@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Upload Document - Estate Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary": "#004e33",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#57657a",
+                    "primary-container": "#3f51b5",
+                    "on-tertiary-fixed": "#002113",
+                    "secondary-fixed": "#d5e3fc",
+                    "primary-fixed": "#dee0ff",
+                    "tertiary-container": "#006846",
+                    "surface-container": "#eceef0",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-primary": "#bac3ff",
+                    "on-background": "#191c1e",
+                    "on-surface": "#191c1e",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-tint": "#4355b9",
+                    "on-primary-fixed": "#00105c",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-dim": "#d8dadc",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "secondary-container": "#d5e3fc",
+                    "primary-fixed-dim": "#bac3ff",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "on-tertiary-container": "#5debaf",
+                    "secondary": "#515f74",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "primary": "#24389c",
+                    "background": "#f7f9fb",
+                    "on-secondary-fixed": "#0d1c2e",
+                    "tertiary-fixed": "#6ffbbe",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#454652",
+                    "on-primary-fixed-variant": "#293ca0",
+                    "on-primary-container": "#cacfff",
+                    "surface-bright": "#f7f9fb",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "outline-variant": "#c5c5d4",
+                    "outline": "#757684",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #24389c 0%, #3f51b5 100%);
+        }
+        .tonal-shadow {
+            box-shadow: 0px 12px 32px rgba(25, 28, 30, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex items-center px-4 h-16 w-full max-w-screen-xl mx-auto">
+<button class="p-2 mr-2 text-indigo-900 dark:text-indigo-300 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Manrope'] font-bold text-lg tracking-tight text-indigo-900 dark:text-indigo-300">Add Document</h1>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-screen-md mx-auto">
+<!-- Editorial Intro Section -->
+<section class="mb-10">
+<span class="text-primary font-headline font-bold text-sm tracking-widest uppercase mb-2 block">Step 1 of 2</span>
+<h2 class="font-headline font-extrabold text-3xl text-on-surface leading-tight">Digital Archive</h2>
+<p class="text-on-surface-variant mt-2 max-w-sm">Securely upload your property records. We use AI to extract key details automatically.</p>
+</section>
+<!-- Main Upload Zone (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+<!-- Primary Dropzone Card -->
+<div class="md:col-span-6 group relative">
+<div class="bg-surface-container-lowest rounded-3xl p-12 border-2 border-dashed border-outline-variant/30 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-primary/40 hover:bg-white tonal-shadow">
+<div class="w-20 h-20 bg-primary-fixed flex items-center justify-center rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'wght' 300;">cloud_upload</span>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-surface mb-2">Drop your files here</h3>
+<p class="text-on-surface-variant body-md max-w-xs mx-auto mb-8">Support for PDF, JPG, and PNG up to 25MB.</p>
+<button class="px-8 py-4 editorial-gradient text-white font-headline font-bold rounded-xl active:scale-95 transition-transform">
+                        Browse Files
+                    </button>
+</div>
+</div>
+<!-- Document Category Selection -->
+<div class="md:col-span-6 mt-4">
+<h3 class="font-headline font-bold text-lg text-on-surface mb-6 px-1">Document Type</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Type Card: Lease -->
+<label class="cursor-pointer group">
+<input checked="" class="hidden peer" name="doc_type" type="radio"/>
+<div class="bg-surface-container-low p-5 rounded-2xl border-2 border-transparent transition-all peer-checked:border-primary peer-checked:bg-surface-container-lowest group-hover:bg-surface-container-high">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">description</span>
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant peer-checked:bg-primary peer-checked:border-primary flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+<span class="font-headline font-bold text-sm block">Lease</span>
+</div>
+</label>
+<!-- Type Card: ID Proof -->
+<label class="cursor-pointer group">
+<input class="hidden peer" name="doc_type" type="radio"/>
+<div class="bg-surface-container-low p-5 rounded-2xl border-2 border-transparent transition-all peer-checked:border-primary peer-checked:bg-surface-container-lowest group-hover:bg-surface-container-high">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">badge</span>
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant peer-checked:bg-primary"></div>
+</div>
+<span class="font-headline font-bold text-sm block">ID Proof</span>
+</div>
+</label>
+<!-- Type Card: Rent Receipt -->
+<label class="cursor-pointer group">
+<input class="hidden peer" name="doc_type" type="radio"/>
+<div class="bg-surface-container-low p-5 rounded-2xl border-2 border-transparent transition-all peer-checked:border-primary peer-checked:bg-surface-container-lowest group-hover:bg-surface-container-high">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant peer-checked:bg-primary"></div>
+</div>
+<span class="font-headline font-bold text-sm block">Rent Receipt</span>
+</div>
+</label>
+<!-- Type Card: Insurance -->
+<label class="cursor-pointer group">
+<input class="hidden peer" name="doc_type" type="radio"/>
+<div class="bg-surface-container-low p-5 rounded-2xl border-2 border-transparent transition-all peer-checked:border-primary peer-checked:bg-surface-container-lowest group-hover:bg-surface-container-high">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant peer-checked:bg-primary"></div>
+</div>
+<span class="font-headline font-bold text-sm block">Insurance</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Contextual Tip (Asymmetric Layout) -->
+<div class="md:col-span-6 mt-8">
+<div class="bg-primary-fixed/30 rounded-3xl p-6 flex items-start gap-4 mr-12">
+<div class="p-2 bg-white rounded-xl">
+<span class="material-symbols-outlined text-primary-container">lightbulb</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-primary-fixed">Quick Tip</h4>
+<p class="text-sm text-on-primary-fixed-variant leading-relaxed">High-resolution scans help our AI process your documents 40% faster. Ensure all four corners of the page are visible.</p>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="md:col-span-6 mt-12 mb-12">
+<button class="w-full py-5 editorial-gradient text-white font-headline font-extrabold text-lg rounded-2xl tonal-shadow flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all">
+                    Next Step
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Suppressed for focused task, but kept structure for consistency) -->
+<nav class="fixed bottom-0 left-0 w-full bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl h-20 px-6 pb-safe flex justify-around items-center z-50 rounded-t-3xl shadow-[0px_-8px_24px_rgba(25,28,30,0.04)] md:hidden">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 font-medium tracking-wide">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-['Inter'] text-[11px]">Portfolio</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-700 dark:text-indigo-300 font-bold scale-110 transition-transform tracking-wide">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-['Inter'] text-[11px]">Documents</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 font-medium tracking-wide">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] text-[11px]">Payments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 font-medium tracking-wide">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] text-[11px]">Settings</span>
+</div>
+</nav>
+</body></html>
